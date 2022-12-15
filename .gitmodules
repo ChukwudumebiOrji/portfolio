@@ -1,0 +1,6 @@
+[submodule "sass-base-project"]
+	path = sass-base-project
+	url = https://github.com/ChukwudumebiOrji/sass-base-project
+[submodule "src/sass-base-project"]
+	path = src/sass-base-project
+	url = https://github.com/ChukwudumebiOrji/sass-base-project
