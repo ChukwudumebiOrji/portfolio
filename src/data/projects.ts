@@ -21,7 +21,7 @@ const projects: IProject[] = [
   {
     title: "WhereInTheWorld",
     shortDesc:
-      "A simple website that displays countries all around the world and their information",
+      "A website that displays countries all around the world and their information",
     year: "2022",
     languages: ["react", "sass"],
     liveLink: "http://whereintheworld-ochre.vercel.app/",

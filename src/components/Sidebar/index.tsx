@@ -5,14 +5,13 @@ import Links from "../Links"
 
 const Sidebar = ({ onclick }: any) => {
   return (
-    <div>
-      <button
+    <div className="sidebar">
+      <IoCloseOutline
+        className="close"
         onClick={() => {
           onclick(false)
         }}
-      >
-        <IoCloseOutline />
-      </button>
+      />
       <ul>
         <li>
           <Link to="/">Home</Link>

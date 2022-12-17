@@ -1,0 +1,43 @@
+@mixin card() {
+  color: var(--color-card-text);
+  background-color: var(--color-card-background);
+
+  .grayed-text {
+    color: var(--color-card-grayed-text);
+  }
+}
+
+@mixin font-properties($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin mq($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $breakpoint: map-get(
+      $map: $breakpoints,
+      $key: $breakpoint,
+    );
+  }
+
+  @media screen and (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin cnt {
+  padding: 24px;
+  height: 100vh;
+  overflow: auto;
+
+  @include mq(medium) {
+    padding: 40px;
+  }
+}

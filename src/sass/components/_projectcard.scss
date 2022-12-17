@@ -1,0 +1,40 @@
+.project-card {
+  @include card;
+  padding: 39px;
+  width: 540px;
+
+  .title {
+    @include font-properties(700, 17px, 135%);
+    @include mq(medium) {
+      font-size: 24px;
+    }
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135.2%;
+    margin-bottom: 54px;
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+  }
+
+  .detail-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135.2%;
+    text-transform: uppercase;
+  }
+
+  .detail-body {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 135.2%;
+  }
+}

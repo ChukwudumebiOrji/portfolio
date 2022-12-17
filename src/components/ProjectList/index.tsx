@@ -4,12 +4,14 @@ import ProjectTile from "../ProjectTile"
 
 const ProjectList = () => {
   return (
-    <div>
+    <div className="projects-list">
       <h2>Selected Projects</h2>
-      <div>
-        {projects.map((el) => (
-          <ProjectTile key={el.title} {...el} />
-        ))}
+      <div className="projects-container">
+        <div className="projects">
+          {projects.map((el) => (
+            <ProjectTile key={el.title} {...el} />
+          ))}
+        </div>
       </div>
     </div>
   )

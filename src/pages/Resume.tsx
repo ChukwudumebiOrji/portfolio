@@ -7,11 +7,11 @@ import Links from "../components/Links"
 
 const Resume = () => {
   return (
-    <div>
+    <div className="resume-container">
       <Header />
-      <div>
+      <div className="resume">
         <div>
-          <ul>
+          <ul className="download-links">
             <li>
               <a href="">
                 <BsFillFileEarmarkPdfFill />
@@ -19,7 +19,7 @@ const Resume = () => {
               </a>
             </li>
             <li>
-              <a href="" download>
+              <a href="">
                 <FaGoogleDrive />
                 Download resume (Google drive)
               </a>

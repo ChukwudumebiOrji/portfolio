@@ -1,0 +1,40 @@
+@import "https://fonts.cdnfonts.com/css/cabinet-grotesk";
+
+:root {
+  @each $map, $theme in $theme-colors {
+    //mapping through the colors map
+    @each $val, $colors in $theme {
+      //mapping through light/dark
+      --color-#{$map}-#{$val}: #{$colors};
+    }
+  }
+  @each $name, $value in $card-colors {
+    --color-#{$name}: #{$value};
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabinet grotesk", sans-serif;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font: inherit;
+}

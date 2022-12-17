@@ -1,10 +1,10 @@
 import React from "react"
 
-const Group = ({ title, children }: any) => {
+const Group = ({ title, children, headingClass, contentClass }: any) => {
   return (
     <div>
-      <h2>{title}</h2>
-      <div>{children}</div>
+      <h4 className={headingClass}>{title}</h4>
+      <div className={contentClass}>{children}</div>
     </div>
   )
 }

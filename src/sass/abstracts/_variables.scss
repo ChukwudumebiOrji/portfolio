@@ -1,0 +1,29 @@
+$theme-colors: (
+  light: (
+    bg: #ede0d4,
+    text: #212121,
+    highlighted-text: #7f5539,
+    icon: #474543b2,
+    icon-hover: #212121,
+  ),
+  dark: (
+    bg: #212121,
+    text: #ede0d4,
+    highlighted-text: #ede0d4,
+    icon: #ede0d480,
+    icon-hover: #ede0d4,
+  ),
+);
+
+$card-colors: (
+  card-grayed-text: #f9f8f6b2,
+  card-text: #f9f8f6,
+  card-title: #ede0d4,
+  card-background: #333231,
+);
+
+$breakpoints: (
+  small: 425px,
+  medium: 768px,
+  large: 1024px,
+);

@@ -1,0 +1,41 @@
+.cv {
+  @include card;
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 75vh;
+  max-width: 615px;
+
+  .name {
+    @include font-properties(500, 24px, 30px);
+  }
+
+  .role {
+    @include font-properties(400, 16px, 20px);
+    margin-bottom: 32px;
+  }
+
+  .title {
+    @include font-properties(500, 18px, 22px);
+    text-transform: capitalize;
+    color: var(--color-light-bg);
+    margin-bottom: 4px;
+
+    &-last {
+      @include font-properties(500, 24px, 30px);
+      margin-bottom: 16px;
+    }
+  }
+
+  .mb-24 {
+    margin-bottom: 24px;
+  }
+
+  .mb-64 {
+    margin-bottom: 64px;
+  }
+
+  @include mq(medium) {
+    padding: 40px;
+  }
+}

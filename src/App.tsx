@@ -3,7 +3,7 @@ import router from "./router/index"
 
 function App() {
   return (
-    <div>
+    <div className="light">
       <RouterProvider router={router}></RouterProvider>
     </div>
   )

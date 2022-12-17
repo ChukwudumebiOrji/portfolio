@@ -1,0 +1,26 @@
+.workexp {
+  margin-bottom: 32px;
+
+  .duration {
+    @include font-properties(400, 12px, 15px);
+    margin-bottom: 16px;
+  }
+
+  .company {
+    @include font-properties(400, 14px, 17px);
+    margin-bottom: 8px;
+
+    .bold {
+      @include font-properties(500, 18px, 22px);
+    }
+  }
+
+  ul {
+    padding-left: 40px;
+  }
+
+  li {
+    list-style: disc;
+    @include font-properties(400, 14px, 21px);
+  }
+}

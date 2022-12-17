@@ -2,31 +2,36 @@ import React from "react"
 import { useNavigate } from "react-router-dom"
 import { BsArrowUpRight } from "react-icons/bs"
 import Group from "../Group"
+import { getLanguagesStr } from "../../utils/func"
 
 const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
   const nav = useNavigate()
-  const getLanguagesStr = () => {
-    let str = ""
-    languages.forEach((el: any) => {
-      str += `${el}, `
-    })
-    str = str.slice(0, -2)
-    return str
-  }
 
   const navigateOnClick = () => {
     nav(`/project/${title}`)
   }
 
   return (
-    <div onClick={navigateOnClick}>
-      <h2>{title}</h2>
+    <div onClick={navigateOnClick} className="project-card">
+      <h2 className="title">{title}</h2>
 
-      <p>{shortDesc}</p>
+      <p className="desc">{shortDesc}</p>
 
-      <div>
-        <Group title="year">{year}</Group>
-        <Group title="languages">{getLanguagesStr()}</Group>
+      <div className="details">
+        <Group
+          title="year"
+          headingClass="grayed-text detail-title"
+          contentClass="detail-body"
+        >
+          {year}
+        </Group>
+        <Group
+          title="languages"
+          headingClass="grayed-text detail-title"
+          contentClass="detail-body"
+        >
+          {getLanguagesStr(languages)}
+        </Group>
 
         <a href={liveLink} target="_blank" rel="noreferrer">
           View Project <BsArrowUpRight />

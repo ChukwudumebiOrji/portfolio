@@ -1,0 +1,29 @@
+.resume {
+  &-container {
+    @include cnt;
+  }
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mq(medium) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .download-links {
+    margin: 40px 0;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

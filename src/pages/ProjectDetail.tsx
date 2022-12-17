@@ -3,28 +3,25 @@ import { useLoaderData, useNavigate } from "react-router-dom"
 import Group from "../components/Group"
 import Header from "../components/Header"
 import projects from "../data/projects"
-import { BsArrowUpRight } from "react-icons/bs"
+import { BsArrowLeft, BsArrowUpRight } from "react-icons/bs"
+import { getLanguagesStr } from "../utils/func"
+import Links from "../components/Links"
 
 const ProjectDetail = () => {
   const loaderData = useLoaderData()
   const nav = useNavigate()
+
   const project = projects.find((el) => el.title === loaderData)
-  const getLanguagesStr = () => {
-    let str = ""
-    project?.languages.forEach((el: any) => {
-      str += `${el}, `
-    })
-    str = str.slice(0, -2)
-    return str
-  }
+
   return (
-    <div>
+    <div className="project-detail">
       <Header />
       <button
         onClick={() => {
           nav(-1)
         }}
       >
+        <BsArrowLeft />
         back
       </button>
       {!project ? (
@@ -37,7 +34,9 @@ const ProjectDetail = () => {
               <Group title="year">{project?.year}</Group>
             </div>
             <div>
-              <Group title="languages">{getLanguagesStr()}</Group>
+              <Group title="languages">
+                {getLanguagesStr(project.languages)}
+              </Group>
             </div>
           </div>
           <div>
@@ -46,6 +45,7 @@ const ProjectDetail = () => {
               View Project <BsArrowUpRight />
             </a>
           </div>
+          <Links />
         </div>
       )}
     </div>

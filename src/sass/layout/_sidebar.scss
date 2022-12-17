@@ -1,0 +1,41 @@
+.sidebar {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  z-index: 10;
+
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 24px;
+    @include font-properties(500, 21px, 26px);
+
+    &:nth-child(2) {
+      margin-bottom: 88px;
+    }
+  }
+
+  .links ul {
+    flex-direction: row;
+  }
+
+  .close {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+}

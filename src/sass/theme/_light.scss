@@ -1,0 +1,19 @@
+.light {
+  background-color: var(--color-light-bg);
+  color: var(--color-light-text);
+
+  .sidebar {
+    background-color: var(--color-light-bg);
+  }
+
+  .highlighted {
+    color: var(--color-light-highlighted-text);
+  }
+
+  svg {
+    color: var(--color-light-icon);
+    &:hover {
+      color: var(--color-light-icon-hover);
+    }
+  }
+}

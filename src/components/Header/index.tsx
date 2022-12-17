@@ -3,10 +3,11 @@ import { BsMoon, BsSun } from "react-icons/bs"
 import { IoMenuOutline } from "react-icons/io5"
 import { Link } from "react-router-dom"
 import Sidebar from "../Sidebar"
+import img from "../../assets/me.png"
 
 const Header = () => {
   const [isLight, setIsLight] = useState(true)
-  const [windowSize, setWindowSize] = useState(0)
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
   const [showSidebar, setShowSidebar] = useState(false)
 
   useEffect(() => {
@@ -16,11 +17,11 @@ const Header = () => {
   }, [windowSize])
 
   return (
-    <div>
+    <div className="header">
       {showSidebar && <Sidebar onclick={setShowSidebar} />}
       <div>
-        <img src="" alt="" />
-        <p>Chukwudumebi Orji</p>
+        <p className="name">Hi there, I'm Chukwudumebi Orji</p>
+        <img src={img} alt="" className="profile-img" />
       </div>
       <nav>
         <ul>
@@ -30,7 +31,7 @@ const Header = () => {
                 setShowSidebar(true)
               }}
             >
-              <IoMenuOutline />
+              <IoMenuOutline className="toggle" />
             </li>
           ) : (
             <>
