@@ -73,6 +73,10 @@
       margin-top: 60px;
     }
 
+    > * {
+      max-width: 50%;
+    }
+
     .inspo {
       margin-bottom: 8px;
       @include font-properties(500, 18px, 135%);

@@ -5,6 +5,14 @@
   .grayed-text {
     color: var(--color-card-grayed-text);
   }
+
+  svg {
+    color: var(--color-card-text);
+
+    &:hover {
+      color: inherit;
+    }
+  }
 }
 
 @mixin font-properties($font-weight, $font-size, $line-height) {

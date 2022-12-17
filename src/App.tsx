@@ -1,9 +1,9 @@
 import { RouterProvider } from "react-router-dom"
 import router from "./router/index"
 
-function App() {
+const App = () => {
   return (
-    <div className="light">
+    <div className={"light"}>
       <RouterProvider router={router}></RouterProvider>
     </div>
   )

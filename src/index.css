@@ -373,6 +373,9 @@ button {
     margin-top: 60px;
   }
 }
+.home .footer > * {
+  max-width: 50%;
+}
 .home .footer .inspo {
   margin-bottom: 8px;
   font-weight: 500;
@@ -418,10 +421,62 @@ button {
   padding: 24px;
   height: 100vh;
   overflow: auto;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .project-detail {
     padding: 40px;
+  }
+}
+.project-detail button {
+  display: flex;
+  gap: 8px;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .project-detail button {
+    margin-bottom: 32px;
+  }
+}
+.project-detail .title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 135%;
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1024px) {
+  .project-detail .title {
+    font-size: 27px;
+  }
+}
+.project-detail .details {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 1024px) {
+  .project-detail .details {
+    gap: 40px;
+  }
+}
+.project-detail .desc {
+  height: 250px;
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 16px;
+}
+.project-detail .links {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+@media screen and (min-width: 768px) {
+  .project-detail .links {
+    bottom: 40px;
+    left: 40px;
   }
 }
 
@@ -433,6 +488,12 @@ button {
 }
 .project-card .grayed-text {
   color: var(--color-card-grayed-text);
+}
+.project-card svg {
+  color: var(--color-card-text);
+}
+.project-card svg:hover {
+  color: inherit;
 }
 .project-card .title {
   font-weight: 700;
@@ -475,11 +536,17 @@ button {
   padding: 24px;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: 75vh;
+  max-height: 70vh;
   max-width: 615px;
 }
 .cv .grayed-text {
   color: var(--color-card-grayed-text);
+}
+.cv svg {
+  color: var(--color-card-text);
+}
+.cv svg:hover {
+  color: inherit;
 }
 .cv .name {
   font-weight: 500;

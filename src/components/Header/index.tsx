@@ -10,6 +10,15 @@ const Header = () => {
   const [windowSize, setWindowSize] = useState(window.innerWidth)
   const [showSidebar, setShowSidebar] = useState(false)
 
+  const activeLinkHandler = (e: any) => {
+    const target = e.target as HTMLLinkElement
+    const parent = target.parentElement?.parentElement
+    parent
+      ?.querySelectorAll(".routerlink")
+      .forEach((el) => el.classList.remove("highlighted"))
+    target.classList.add("highlighted")
+  }
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWindowSize(window.innerWidth)
@@ -36,10 +45,22 @@ const Header = () => {
           ) : (
             <>
               <li>
-                <Link to="/">Home</Link>
+                <Link
+                  to="/"
+                  className="highlighted routerlink"
+                  onMouseEnter={activeLinkHandler}
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/resume">Resume</Link>
+                <Link
+                  to="/resume"
+                  className="routerlink"
+                  onMouseEnter={activeLinkHandler}
+                >
+                  Resume
+                </Link>
               </li>
               <li
                 onClick={() => {

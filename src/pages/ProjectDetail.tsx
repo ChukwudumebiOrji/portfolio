@@ -17,6 +17,7 @@ const ProjectDetail = () => {
     <div className="project-detail">
       <Header />
       <button
+        className="btn"
         onClick={() => {
           nav(-1)
         }}
@@ -28,8 +29,8 @@ const ProjectDetail = () => {
         <div>No Project Found</div>
       ) : (
         <div>
-          <h1>{project?.title}</h1>
-          <div>
+          <h1 className="title">{project?.title}</h1>
+          <div className="details">
             <div>
               <Group title="year">{project?.year}</Group>
             </div>
@@ -40,8 +41,13 @@ const ProjectDetail = () => {
             </div>
           </div>
           <div>
-            <p>{project?.longDesc}</p>
-            <a href={project?.liveLink} target="_blank" rel="noreferrer">
+            <p className="desc">{project?.longDesc}</p>
+            <a
+              className="viewlink"
+              href={project?.liveLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               View Project <BsArrowUpRight />
             </a>
           </div>

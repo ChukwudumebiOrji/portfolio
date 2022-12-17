@@ -15,7 +15,8 @@ const projects: IProject[] = [
     year: "2022",
     languages: ["react", "sass"],
     liveLink: "http://roomlandingpage.vercel.app",
-    longDesc: "",
+    longDesc:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit!",
     repoLink: "https://github.com/ChukwudumebiOrji/RoomLandingPage/",
   },
   {
@@ -25,7 +26,9 @@ const projects: IProject[] = [
     year: "2022",
     languages: ["react", "sass"],
     liveLink: "http://whereintheworld-ochre.vercel.app/",
-    longDesc: "",
+
+    longDesc:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit!",
     repoLink: "https://github.com/ChukwudumebiOrji/whereintheworld",
   },
   {
@@ -35,7 +38,8 @@ const projects: IProject[] = [
     languages: ["angular", "css"],
     liveLink:
       "https://chukwudumebiorji.github.io/AngularEmployeeManagementApp/",
-    longDesc: "",
+    longDesc:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi incidunt totam laborum ullam impedit!",
     repoLink:
       "https://github.com/ChukwudumebiOrji/AngularEmployeeManagementApp",
   },
