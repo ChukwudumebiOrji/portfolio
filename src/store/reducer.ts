@@ -22,8 +22,11 @@ export const appReducer = (state: IInitialState, action: AppAction) => {
       return { ...state, isDark }
 
     case "RESIZE_WINDOW":
-      if (window.innerWidth < 768) showMenuBtn = true
-      else showMenuBtn = false
+      if (window.innerWidth < 768) {
+        showMenuBtn = true
+      } else {
+        showMenuBtn = false
+      }
       return { ...state, showMenuBtn }
 
     case "CHANGE_CURTAIN_STATE":

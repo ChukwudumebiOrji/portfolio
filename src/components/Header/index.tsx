@@ -1,17 +1,35 @@
-import React, { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import { BsMoon, BsSun } from "react-icons/bs"
 import { IoMenuOutline } from "react-icons/io5"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Sidebar from "../Sidebar"
 import img from "../../assets/me.png"
 import { AppContext } from "../../store/store"
-import { openSidebar, toggleTheme } from "../../store/actions"
+import {
+  closeCurtain,
+  closeSidebar,
+  openSidebar,
+  resizeWindow,
+  toggleTheme,
+} from "../../store/actions"
 
 const Header = () => {
   const {
     state: { showMenuBtn, isDark, showSidebar },
     dispatch,
   } = useContext(AppContext)
+  const nav = useNavigate()
+
+  const linkHandler = (path: string) => {
+    dispatch(closeCurtain())
+    nav(path)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      dispatch(resizeWindow())
+    })
+  }, [window.innerWidth, dispatch])
 
   return (
     <div className="header">
@@ -28,15 +46,21 @@ const Header = () => {
             </li>
           ) : (
             <>
-              <li>
-                <Link to="/" className="highlighted routerlink">
-                  Home
-                </Link>
+              <li
+                onClick={(e) => {
+                  linkHandler("/")
+                }}
+                className="routerlink"
+              >
+                Home
               </li>
-              <li>
-                <Link to="/resume" className="routerlink">
-                  Resume
-                </Link>
+              <li
+                onClick={(e) => {
+                  linkHandler("/resume")
+                }}
+                className="routerlink"
+              >
+                Resume
               </li>
               <li onClick={() => dispatch(toggleTheme())}>
                 {isDark ? <BsMoon /> : <BsSun />}

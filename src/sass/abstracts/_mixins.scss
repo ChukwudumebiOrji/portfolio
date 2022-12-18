@@ -41,8 +41,8 @@
 }
 
 @mixin cnt {
+  min-height: 100vh;
   padding: 24px;
-  height: 100vh;
   overflow: auto;
 
   @include mq(medium) {

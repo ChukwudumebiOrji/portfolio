@@ -5,7 +5,6 @@ import Header from "../components/Header"
 import projects from "../data/projects"
 import { BsArrowLeft, BsArrowUpRight } from "react-icons/bs"
 import { getLanguagesStr } from "../utils/func"
-import Links from "../components/Links"
 
 const ProjectDetail = () => {
   const loaderData = useLoaderData()
@@ -17,7 +16,7 @@ const ProjectDetail = () => {
     <div className="project-detail">
       <Header />
       <button
-        className="btn"
+        className="highlighted"
         onClick={() => {
           nav(-1)
         }}
@@ -30,28 +29,24 @@ const ProjectDetail = () => {
       ) : (
         <div>
           <h1 className="title">{project?.title}</h1>
+          <div className="about highlighted ">
+            <Group title="year">{project?.year}</Group>
+            <Group title="languages">
+              {getLanguagesStr(project.languages)}
+            </Group>
+          </div>
           <div className="details">
-            <div>
-              <Group title="year">{project?.year}</Group>
-            </div>
-            <div>
-              <Group title="languages">
-                {getLanguagesStr(project.languages)}
-              </Group>
-            </div>
-          </div>
-          <div>
             <p className="desc">{project?.longDesc}</p>
-            <a
-              className="viewlink"
-              href={project?.liveLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Project <BsArrowUpRight />
-            </a>
+            <div className="viewlink">
+              <a href="/">
+                <BsArrowLeft />
+                back
+              </a>
+              <a href={project?.liveLink} target="_blank" rel="noreferrer">
+                View Project <BsArrowUpRight />
+              </a>
+            </div>
           </div>
-          <Links />
         </div>
       )}
     </div>

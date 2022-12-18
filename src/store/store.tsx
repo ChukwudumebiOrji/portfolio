@@ -5,7 +5,7 @@ import { appReducer } from "./reducer"
 const initialState = {
   isDark: window.matchMedia("(prefers-color-scheme: dark)").matches,
   showSidebar: false,
-  showCurtain: false,
+  showCurtain: true,
   showMenuBtn: window.innerWidth > 768 ? false : true,
   curtainState: "hello",
   loadingText: "fixing stuff",

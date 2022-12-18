@@ -1,16 +1,23 @@
-import React from "react"
-import { BsArrowUpRight } from "react-icons/bs"
+import React, { useContext } from "react"
+import { BsArrowUpRight, BsMoon, BsSun } from "react-icons/bs"
 import Curtain from "../components/Curtain"
 import Group from "../components/Group"
 import Header from "../components/Header"
 import Links from "../components/Links"
 import ProjectList from "../components/ProjectList"
+import { toggleTheme } from "../store/actions"
+import { AppContext } from "../store/store"
 
 const Home = () => {
+  const {
+    state: { showCurtain, showMenuBtn, isDark },
+    dispatch,
+  } = useContext(AppContext)
+
   return (
     <div className="home">
       <div>
-        <Curtain />
+        {showCurtain && <Curtain />}
         <Header />
         <div className="about">
           <p className="desc">
@@ -30,11 +37,17 @@ const Home = () => {
         <ProjectList />
         <div className="footer">
           <Links />
-          <Group title="Inspired by" headingClass="inspo">
-            <a href="http://kadet.dev" target="_blank" rel="noreferrer">
-              kadet.dev <BsArrowUpRight />
-            </a>
-          </Group>
+          {showMenuBtn ? (
+            <span onClick={() => dispatch(toggleTheme())}>
+              {isDark ? <BsMoon /> : <BsSun />}
+            </span>
+          ) : (
+            <Group title="Inspired by" headingClass="inspo">
+              <a href="http://kadet.dev" target="_blank" rel="noreferrer">
+                kadet.dev <BsArrowUpRight />
+              </a>
+            </Group>
+          )}
         </div>
       </div>
     </div>

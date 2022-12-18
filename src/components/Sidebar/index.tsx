@@ -19,10 +19,24 @@ const Sidebar = () => {
       </span>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link
+            to="/"
+            onClick={() => {
+              dispatch(closeSidebar())
+            }}
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/resume">Resume</Link>
+          <Link
+            to="/resume"
+            onClick={() => {
+              dispatch(closeSidebar())
+            }}
+          >
+            Resume
+          </Link>
         </li>
       </ul>
       <Links />

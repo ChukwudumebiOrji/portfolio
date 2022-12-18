@@ -1,11 +1,19 @@
 .project-card {
   @include card;
-  padding: 39px;
-  width: 360px;
+  width: 300px;
+  height: 240px;
+  padding: 20px;
   cursor: pointer;
 
+  @include mq(medium) {
+    padding: 30px;
+    width: 420px;
+  }
+
   @include mq(large) {
+    padding: 40px;
     width: 540px;
+    height: 264px;
   }
 
   .title {
@@ -17,9 +25,7 @@
   }
 
   .desc {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 135.2%;
+    @include font-properties(400, 16px, 135%);
     margin-bottom: 54px;
   }
 
@@ -31,15 +37,11 @@
   }
 
   .detail-title {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 135.2%;
+    @include font-properties(400, 16px, 135%);
     text-transform: uppercase;
   }
 
   .detail-body {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 135.2%;
+    @include font-properties(500, 16px, 135%);
   }
 }
