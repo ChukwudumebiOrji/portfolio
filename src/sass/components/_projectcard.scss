@@ -1,7 +1,12 @@
 .project-card {
   @include card;
   padding: 39px;
-  width: 540px;
+  width: 360px;
+  cursor: pointer;
+
+  @include mq(large) {
+    width: 540px;
+  }
 
   .title {
     @include font-properties(700, 17px, 135%);

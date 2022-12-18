@@ -1,9 +1,15 @@
+import { useContext } from "react"
 import { RouterProvider } from "react-router-dom"
 import router from "./router/index"
+import { AppContext } from "./store/store"
 
 const App = () => {
+  const {
+    state: { isDark },
+  } = useContext(AppContext)
+
   return (
-    <div className={"light"}>
+    <div className={isDark ? "dark" : "light"}>
       <RouterProvider router={router}></RouterProvider>
     </div>
   )

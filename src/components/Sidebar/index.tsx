@@ -1,17 +1,22 @@
-import React from "react"
+import React, { useContext } from "react"
 import { IoCloseOutline } from "react-icons/io5"
 import { Link } from "react-router-dom"
+import { closeSidebar } from "../../store/actions"
+import { AppContext } from "../../store/store"
 import Links from "../Links"
 
-const Sidebar = ({ onclick }: any) => {
+const Sidebar = () => {
+  const { dispatch } = useContext(AppContext)
+
   return (
     <div className="sidebar">
-      <IoCloseOutline
-        className="close"
-        onClick={() => {
-          onclick(false)
-        }}
-      />
+      <span className="close">
+        <IoCloseOutline
+          onClick={() => {
+            dispatch(closeSidebar())
+          }}
+        />
+      </span>
       <ul>
         <li>
           <Link to="/">Home</Link>
