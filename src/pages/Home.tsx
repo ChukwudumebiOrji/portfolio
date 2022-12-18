@@ -39,7 +39,7 @@ const Home = () => {
           <Links />
           {showMenuBtn ? (
             <span onClick={() => dispatch(toggleTheme())}>
-              {isDark ? <BsMoon /> : <BsSun />}
+              {isDark ? <BsSun /> : <BsMoon />}
             </span>
           ) : (
             <Group title="Inspired by" headingClass="inspo">

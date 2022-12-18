@@ -25,16 +25,13 @@
 
   li {
     margin-left: 26px;
+    cursor: pointer;
     @include font-properties(500, 20px, 135%);
   }
 
   .name {
     @include font-properties(800, 21px, 26px);
-    margin-bottom: 8px;
-
-    @include mq(medium) {
-      margin-bottom: 16px;
-    }
+    margin-bottom: 16px;
   }
 
   .toggle {

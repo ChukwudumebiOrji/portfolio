@@ -7,7 +7,6 @@ import img from "../../assets/me.png"
 import { AppContext } from "../../store/store"
 import {
   closeCurtain,
-  closeSidebar,
   openSidebar,
   resizeWindow,
   toggleTheme,
@@ -20,7 +19,11 @@ const Header = () => {
   } = useContext(AppContext)
   const nav = useNavigate()
 
-  const linkHandler = (path: string) => {
+  const linkHandler = (e: any, path: string) => {
+    document
+      .querySelectorAll(".routerlink")
+      .forEach((el) => el.classList.remove("highlighted"))
+    e.target.addEventListener("", () => {})
     dispatch(closeCurtain())
     nav(path)
   }
@@ -48,7 +51,7 @@ const Header = () => {
             <>
               <li
                 onClick={(e) => {
-                  linkHandler("/")
+                  linkHandler(e, "/")
                 }}
                 className="routerlink"
               >
@@ -56,14 +59,14 @@ const Header = () => {
               </li>
               <li
                 onClick={(e) => {
-                  linkHandler("/resume")
+                  linkHandler(e, "/resume")
                 }}
                 className="routerlink"
               >
                 Resume
               </li>
               <li onClick={() => dispatch(toggleTheme())}>
-                {isDark ? <BsMoon /> : <BsSun />}
+                {isDark ? <BsSun /> : <BsMoon />}
               </li>
             </>
           )}

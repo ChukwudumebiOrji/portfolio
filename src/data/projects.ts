@@ -33,7 +33,7 @@ const projects: IProject[] = [
   },
   {
     title: "Employee Management App",
-    shortDesc: "A simple crud app to manage employees in a company",
+    shortDesc: "A simple crud application to manage employees in a company",
     year: "2022",
     languages: ["angular", "css"],
     liveLink:

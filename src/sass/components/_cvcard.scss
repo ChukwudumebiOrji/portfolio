@@ -23,7 +23,7 @@
   .title {
     @include font-properties(500, 18px, 22px);
     text-transform: capitalize;
-    color: var(--color-light-bg);
+    color: var(--color-card-title);
     margin-bottom: 4px;
 
     &-last {

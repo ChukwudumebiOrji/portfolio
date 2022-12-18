@@ -1,15 +1,11 @@
 .curtain {
-  width: 100vw;
-  height: 100vh;
+  @include overlay;
   background-color: var(--color-light-bg);
   color: var(--color-light-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
 
   button {
     display: block;
