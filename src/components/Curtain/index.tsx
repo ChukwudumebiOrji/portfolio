@@ -16,16 +16,16 @@ const Curtain = () => {
     dispatch(changeCurtainState("loading"))
     setTimeout(() => {
       dispatch(changeLoadingText("tidying up"))
-    }, 2000)
+    }, 1000)
     setTimeout(() => {
       dispatch(closeCurtain())
-    }, 4000)
+    }, 2500)
   }
 
   useEffect(() => {
     setTimeout(() => {
       dispatch(changeCurtainState("welcome"))
-    }, 2000)
+    }, 1000)
   }, [dispatch])
 
   if (curtainState === "welcome")

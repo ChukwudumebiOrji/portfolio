@@ -1,8 +1,8 @@
-import React from "react"
 import { useNavigate } from "react-router-dom"
 import { BsArrowUpRight } from "react-icons/bs"
 import Group from "../Group"
 import { getLanguagesStr } from "../../utils/func"
+import { motion } from "framer-motion"
 
 const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
   const nav = useNavigate()

@@ -1,11 +1,10 @@
 .links {
   p {
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
   }
 
   ul {
-    display: flex;
-    gap: 32px;
+    @include flex($gap: 32px);
   }
 
   svg {

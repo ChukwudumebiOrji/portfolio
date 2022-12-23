@@ -19,11 +19,7 @@ const Header = () => {
   } = useContext(AppContext)
   const nav = useNavigate()
 
-  const linkHandler = (e: any, path: string) => {
-    document
-      .querySelectorAll(".routerlink")
-      .forEach((el) => el.classList.remove("highlighted"))
-    e.target.addEventListener("", () => {})
+  const linkHandler = (path: string) => {
     dispatch(closeCurtain())
     nav(path)
   }
@@ -51,7 +47,7 @@ const Header = () => {
             <>
               <li
                 onClick={(e) => {
-                  linkHandler(e, "/")
+                  linkHandler("/")
                 }}
                 className="routerlink"
               >
@@ -59,7 +55,7 @@ const Header = () => {
               </li>
               <li
                 onClick={(e) => {
-                  linkHandler(e, "/resume")
+                  linkHandler("/resume")
                 }}
                 className="routerlink"
               >

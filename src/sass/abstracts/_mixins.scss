@@ -34,20 +34,12 @@
   }
 }
 
-@mixin space-between {
+@mixin flex($justify: flex-start, $align: stretch, $gap: 0, $direction: row) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin cnt {
-  min-height: 100vh;
-  padding: 24px;
-  overflow: auto;
-
-  @include mq(medium) {
-    padding: 40px;
-  }
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-direction: $direction;
 }
 
 @mixin overlay {
@@ -56,4 +48,23 @@
   position: fixed;
   left: 0;
   top: 0;
+  @include flex($justify: center, $align: center, $direction: column);
+}
+
+@mixin cnt {
+  min-height: 100vh;
+  padding: 1.5em;
+  overflow: auto;
+
+  @include mq(medium) {
+    padding: 2.5em;
+  }
+}
+
+@mixin remove-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -3,24 +3,21 @@
     @include cnt;
   }
 
-  display: flex;
-  flex-direction: column-reverse;
+  @include flex($direction: column-reverse);
 
   @include mq(medium) {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+    @include flex($direction: row, $align: flex-end, $justify: space-between);
   }
 
   .download-links {
-    margin: 40px 0;
+    margin: 2.5em 0;
 
     svg {
-      margin-right: 8px;
+      margin-right: 0.5em;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 0.5em;
       &:hover {
         text-decoration: underline;
       }

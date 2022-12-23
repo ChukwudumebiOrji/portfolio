@@ -3,7 +3,7 @@
 
   .desc {
     @include font-properties(400, 16px, 135%);
-    margin-bottom: 36px;
+    margin-bottom: 2.25em;
 
     @include mq(medium) {
       max-width: 420px;
@@ -19,16 +19,18 @@
   }
 
   .languages {
-    margin-bottom: 8px;
     @include font-properties(700, 14px, 135%);
+    margin-bottom: 0.5em;
+
     @include mq(large) {
       text-align: right;
     }
 
     &-content {
       text-transform: capitalize;
-      margin-bottom: 48px;
+      margin-bottom: 3em;
       @include font-properties(400, 14px, 135%);
+
       @include mq(large) {
         text-align: right;
       }
@@ -37,13 +39,12 @@
 
   .about {
     @include mq(medium) {
-      @include space-between;
+      @include flex($justify: space-between, $align: center);
     }
   }
 
   .projects {
-    display: flex;
-    gap: 16px;
+    @include flex($gap: 16px);
     width: fit-content;
 
     @include mq(large) {
@@ -52,12 +53,11 @@
 
     &-list {
       > h2 {
-        margin-bottom: 16px;
         @include font-properties(700, 14px, 135%);
+        margin-bottom: 0.4em;
 
         @include mq(large) {
-          margin-bottom: 32px;
-          @include font-properties(700, 24px, 135%);
+          font-size: 24px;
         }
       }
     }
@@ -66,20 +66,17 @@
       max-width: 100%;
       overflow-y: hidden;
       overflow-x: auto;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
+      @include remove-scrollbar;
     }
   }
 
   .footer {
-    margin-top: 30px;
+    margin-top: 1.75em;
 
-    @include space-between;
+    @include flex($justify: space-between, $align: center);
+
     @include mq(large) {
-      margin-top: 60px;
+      margin-top: 3.5em;
     }
 
     > * {
@@ -87,7 +84,7 @@
     }
 
     .inspo {
-      margin-bottom: 8px;
+      margin-bottom: 0.5em;
       @include font-properties(500, 18px, 135%);
     }
   }

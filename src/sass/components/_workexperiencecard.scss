@@ -1,14 +1,14 @@
 .workexp {
-  margin-bottom: 32px;
+  margin-bottom: 2em;
 
   .duration {
     @include font-properties(400, 12px, 15px);
-    margin-bottom: 16px;
+    margin-bottom: 1em;
   }
 
   .company {
     @include font-properties(400, 14px, 17px);
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 
     .bold {
       @include font-properties(500, 18px, 22px);
@@ -16,7 +16,7 @@
   }
 
   ul {
-    padding-left: 40px;
+    padding-left: 2.5em;
   }
 
   li {

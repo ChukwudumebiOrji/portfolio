@@ -28,7 +28,8 @@ li {
   list-style: none;
 }
 
-a {
+a,
+a:visited {
   text-decoration: none;
   color: inherit;
 }

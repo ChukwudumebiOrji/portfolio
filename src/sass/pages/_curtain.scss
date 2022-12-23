@@ -2,10 +2,6 @@
   @include overlay;
   background-color: var(--color-light-bg);
   color: var(--color-light-text);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   button {
     display: block;
@@ -13,10 +9,8 @@
     bottom: 10vh;
     border: none;
     background-color: transparent;
-    @include font-properties(400, 14px, 17px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include font-properties(400, 14px, 18px);
+    @include flex($align: center, $justify: center);
 
     @include mq(medium) {
       @include font-properties(400, 20px, 24px);
@@ -33,23 +27,23 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    margin-left: 8px;
+    margin-left: 0.5em;
 
     @include mq(medium) {
       width: 12px;
       height: 12px;
-      margin-left: 12px;
+      margin-left: 0.75em;
     }
 
     @include mq(large) {
       width: 16px;
       height: 16px;
-      margin-left: 16px;
+      margin-left: 1em;
     }
   }
 
   .welcome-text {
-    @include font-properties(700, 27px, 33px);
+    @include font-properties(700, 28px, 33px);
 
     @include mq(medium) {
       @include font-properties(700, 64px, 72px);
@@ -64,7 +58,7 @@
     height: 50px;
     width: 150px;
     background-color: var(--color-light-text);
-    margin-bottom: 34px;
+    margin-bottom: 2em;
 
     @include mq(medium) {
       height: 75px;
