@@ -126,6 +126,7 @@ button {
 }
 .sidebar .links ul {
   flex-direction: row;
+  gap: 0;
 }
 .sidebar .close {
   position: absolute;
@@ -188,7 +189,7 @@ button {
 .curtain button {
   display: block;
   position: absolute;
-  bottom: 10vh;
+  bottom: 20vh;
   border: none;
   background-color: transparent;
   font-weight: 400;
@@ -303,7 +304,7 @@ button {
 }
 .home .desc {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 135%;
   margin-bottom: 2.25em;
 }
@@ -347,7 +348,7 @@ button {
   .home .about {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 0;
     flex-direction: row;
   }
@@ -364,7 +365,7 @@ button {
   font-weight: 700;
   font-size: 18px;
   line-height: 135%;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.5em;
 }
 @media screen and (min-width: 1024px) {
   .home .projects-list > h2 {
@@ -382,16 +383,16 @@ button {
   display: none;
 }
 .home .footer {
-  margin-top: 1.75em;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 0;
   flex-direction: row;
+  margin-top: 1.75em;
 }
 @media screen and (min-width: 1024px) {
   .home .footer {
-    margin-top: 3.5em;
+    margin-top: 3em;
   }
 }
 .home .footer > * {
@@ -399,8 +400,13 @@ button {
 }
 .home .footer .inspo {
   margin-bottom: 0.5em;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
+  line-height: 135%;
+}
+.home .footer .inspo a {
+  font-weight: 200;
+  font-size: 12px;
   line-height: 135%;
 }
 
@@ -517,7 +523,7 @@ button {
 }
 .project-detail .desc {
   font-size: 18px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .project-detail .viewlink {
   display: flex;
@@ -543,13 +549,13 @@ button {
   margin: 0 0.5em;
 }
 .project-detail .links {
-  margin-top: 1em;
+  margin-top: 2.5em;
 }
 
 .project-card {
   color: var(--color-card-text);
   background-color: var(--color-card-background);
-  width: 360px;
+  width: 325px;
   padding: 1.25em;
   cursor: pointer;
 }
@@ -727,7 +733,7 @@ button {
 }
 
 .links p {
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 1.25em;
 }
 .links ul {
@@ -738,8 +744,8 @@ button {
   flex-direction: row;
 }
 .links svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,7 +2,7 @@
   @include cnt;
 
   .desc {
-    @include font-properties(400, 16px, 135%);
+    @include font-properties(400, 17px, 135%);
     margin-bottom: 2.25em;
 
     @include mq(medium) {
@@ -39,7 +39,7 @@
 
   .about {
     @include mq(medium) {
-      @include flex($justify: space-between, $align: center);
+      @include flex($justify: space-between, $align: flex-start);
     }
   }
 
@@ -50,7 +50,7 @@
     &-list {
       > h2 {
         @include font-properties(700, 18px, 135%);
-        margin-bottom: 0.4em;
+        margin-bottom: 0.5em;
 
         @include mq(large) {
           font-size: 24px;
@@ -67,12 +67,12 @@
   }
 
   .footer {
-    margin-top: 1.75em;
-
     @include flex($justify: space-between, $align: flex-end);
 
+    margin-top: 1.75em;
+
     @include mq(large) {
-      margin-top: 3.5em;
+      margin-top: 3em;
     }
 
     > * {
@@ -81,7 +81,11 @@
 
     .inspo {
       margin-bottom: 0.5em;
-      @include font-properties(500, 18px, 135%);
+      @include font-properties(400, 18px, 135%);
+
+      a {
+        @include font-properties(200, 12px, 135%);
+      }
     }
   }
 }
