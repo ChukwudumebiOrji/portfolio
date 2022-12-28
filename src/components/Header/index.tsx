@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react"
-import { BsMoon, BsSun } from "react-icons/bs"
-import { IoMenuOutline } from "react-icons/io5"
-import { Link, useNavigate } from "react-router-dom"
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs"
+import { FiMenu } from "react-icons/fi"
+import { useNavigate } from "react-router-dom"
 import Sidebar from "../Sidebar"
 import img from "../../assets/me.png"
 import { AppContext } from "../../store/store"
@@ -12,7 +12,7 @@ import {
   toggleTheme,
 } from "../../store/actions"
 
-const Header = () => {
+const Header = ({ route }: any) => {
   const {
     state: { showMenuBtn, isDark, showSidebar },
     dispatch,
@@ -28,7 +28,7 @@ const Header = () => {
     window.addEventListener("resize", () => {
       dispatch(resizeWindow())
     })
-  }, [window.innerWidth, dispatch])
+  }, [dispatch])
 
   return (
     <div className="header">
@@ -41,7 +41,7 @@ const Header = () => {
         <ul>
           {showMenuBtn ? (
             <li onClick={() => dispatch(openSidebar())}>
-              <IoMenuOutline className="toggle" />
+              <FiMenu className="toggle" />
             </li>
           ) : (
             <>
@@ -49,7 +49,9 @@ const Header = () => {
                 onClick={(e) => {
                   linkHandler("/")
                 }}
-                className="routerlink"
+                className={
+                  route === "home" ? "routerlink highlighted" : "routerlink"
+                }
               >
                 Home
               </li>
@@ -57,12 +59,14 @@ const Header = () => {
                 onClick={(e) => {
                   linkHandler("/resume")
                 }}
-                className="routerlink"
+                className={
+                  route === "resume" ? "routerlink highlighted" : "routerlink"
+                }
               >
                 Resume
               </li>
               <li onClick={() => dispatch(toggleTheme())}>
-                {isDark ? <BsSun /> : <BsMoon />}
+                {isDark ? <BsFillMoonFill /> : <BsFillSunFill />}
               </li>
             </>
           )}

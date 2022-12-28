@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { BsArrowUpRight, BsMoon, BsSun } from "react-icons/bs"
+import { useLoaderData } from "react-router-dom"
 import Curtain from "../components/Curtain"
 import Group from "../components/Group"
 import Header from "../components/Header"
@@ -13,12 +14,13 @@ const Home = () => {
     state: { showCurtain, showMenuBtn, isDark },
     dispatch,
   } = useContext(AppContext)
+  const route = useLoaderData()
 
   return (
     <div className="home">
       <div>
         {showCurtain && <Curtain />}
-        <Header />
+        <Header route={route} />
         <div className="about">
           <p className="desc">
             I have been a frontend developer since October, 2021. I create
@@ -52,6 +54,10 @@ const Home = () => {
       </div>
     </div>
   )
+}
+
+export const loader = ({ request }: any) => {
+  return request.url.split("/").pop()
 }
 
 export default Home

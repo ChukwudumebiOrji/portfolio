@@ -5,6 +5,7 @@ import Header from "../components/Header"
 import projects from "../data/projects"
 import { BsArrowLeft, BsArrowUpRight } from "react-icons/bs"
 import { getLanguagesStr } from "../utils/func"
+import Links from "../components/Links"
 
 const ProjectDetail = () => {
   const loaderData = useLoaderData()
@@ -47,6 +48,7 @@ const ProjectDetail = () => {
               </a>
             </div>
           </div>
+          <Links />
         </div>
       )}
     </div>

@@ -1,11 +1,11 @@
 .project-card {
   @include card;
-  width: 300px;
+  width: 360px;
   padding: 1.25em;
   cursor: pointer;
 
   @include mq(medium) {
-    padding: 1.7em;
+    padding: 1.75em;
     width: 420px;
   }
 
@@ -19,13 +19,13 @@
     @include mq(medium) {
       font-size: 24px;
     }
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
   }
 
   .desc {
     @include font-properties(400, 14px, 135%);
     height: 50px;
-    margin-bottom: 1.75em;
+    margin-bottom: 2em;
 
     @include mq(medium) {
       @include font-properties(400, 16px, 135%);
@@ -34,21 +34,29 @@
   }
 
   .details {
-    @include flex($justify: space-between, $align: center);
-
+    @include flex($justify: space-between, $align: flex-end);
     text-transform: capitalize;
     @include font-properties(400, 14px, 135%);
 
     @include mq(medium) {
       @include font-properties(400, 16px, 135%);
     }
+
+    &-content {
+      @include flex($gap: 1.5em);
+    }
   }
 
   .detail-title {
+    font-weight: 300;
     text-transform: uppercase;
   }
 
   .detail-body {
     font-weight: 500;
+  }
+
+  svg {
+    margin-left: 0.25em;
   }
 }

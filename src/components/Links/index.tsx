@@ -1,6 +1,5 @@
 import React from "react"
-import { BsGithub, BsTwitter } from "react-icons/bs"
-import { GrMail } from "react-icons/gr"
+import { AiFillGithub, AiFillTwitterCircle, AiFillMail } from "react-icons/ai"
 
 const Links = () => {
   return (
@@ -13,7 +12,7 @@ const Links = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <BsTwitter />
+            <AiFillGithub />
           </a>
         </li>
         <li>
@@ -22,7 +21,7 @@ const Links = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <BsGithub />
+            <AiFillTwitterCircle />
           </a>
         </li>
         <li>
@@ -31,7 +30,7 @@ const Links = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <GrMail />
+            <AiFillMail />
           </a>
         </li>
       </ul>

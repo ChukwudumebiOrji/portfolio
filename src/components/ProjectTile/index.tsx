@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom"
 import { BsArrowUpRight } from "react-icons/bs"
 import Group from "../Group"
 import { getLanguagesStr } from "../../utils/func"
-import { motion } from "framer-motion"
 
 const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
   const nav = useNavigate()
@@ -18,20 +17,22 @@ const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
       <p className="desc">{shortDesc}</p>
 
       <div className="details">
-        <Group
-          title="year"
-          headingClass="grayed-text detail-title"
-          contentClass="detail-body"
-        >
-          {year}
-        </Group>
-        <Group
-          title="languages"
-          headingClass="grayed-text detail-title"
-          contentClass="detail-body"
-        >
-          {getLanguagesStr(languages)}
-        </Group>
+        <div className="details-content">
+          <Group
+            title="year"
+            headingClass="grayed-text detail-title"
+            contentClass="detail-body"
+          >
+            {year}
+          </Group>
+          <Group
+            title="languages"
+            headingClass="grayed-text detail-title"
+            contentClass="detail-body"
+          >
+            {getLanguagesStr(languages)}
+          </Group>
+        </div>
 
         <a href={liveLink} target="_blank" rel="noreferrer">
           View Project <BsArrowUpRight />

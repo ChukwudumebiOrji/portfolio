@@ -24,8 +24,10 @@
   }
 
   .close {
-    width: 32px;
-    height: 32px;
+    svg {
+      width: 48px;
+      height: 48px;
+    }
     position: absolute;
     top: 24px;
     right: 24px;

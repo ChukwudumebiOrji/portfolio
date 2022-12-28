@@ -21,9 +21,13 @@
   }
 
   li {
-    @include font-properties(500, 20px, 135%);
+    @include font-properties(300, 20px, 135%);
     margin-left: 1.5em;
     cursor: pointer;
+  }
+
+  .highlighted {
+    font-weight: 500;
   }
 
   .name {
