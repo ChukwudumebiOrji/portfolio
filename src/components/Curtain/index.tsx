@@ -5,6 +5,23 @@ import {
   closeCurtain,
 } from "../../store/actions"
 import { AppContext } from "../../store/store"
+import { motion, AnimatePresence } from "framer-motion"
+
+const curtainVariants: any = {
+  initial: {},
+  loadingBar: {
+    width: "90vw",
+    transition: { duration: 2.5 },
+  },
+  circle: {
+    backgroundColor: "#1E1E1E",
+    transition: {
+      repeat: Infinity,
+      repeatType: "reverse",
+      duration: 0.75,
+    },
+  },
+}
 
 const Curtain = () => {
   const {
@@ -33,7 +50,12 @@ const Curtain = () => {
       <div className="curtain">
         <p className="welcome-text">Welcome to my world</p>
         <button onClick={curtainBtnHandler}>
-          Check me out <div className="circle"></div>
+          Check me out{" "}
+          <motion.div
+            className="circle"
+            animate="circle"
+            variants={curtainVariants}
+          ></motion.div>
         </button>
       </div>
     )
@@ -41,7 +63,12 @@ const Curtain = () => {
   if (curtainState === "loading")
     return (
       <div className="curtain">
-        <div className="loading-bar"></div>
+        <motion.div
+          className="loading-bar"
+          initial="initial"
+          animate="loadingBar"
+          variants={curtainVariants}
+        ></motion.div>
         <p className="loading-text">Gimme a sec, {loadingText}...</p>
       </div>
     )
