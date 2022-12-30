@@ -23,7 +23,7 @@ const homeVariants = {
       duration: 1.5,
       type: "spring",
       bounce: 0.4,
-      delay: 0.5,
+      delay: 0.2,
     },
   },
   bottomInitial: {
@@ -37,7 +37,7 @@ const homeVariants = {
       duration: 1.5,
       type: "spring",
       bounce: 0.4,
-      delay: 0.5,
+      delay: 0.2,
     },
   },
 }
