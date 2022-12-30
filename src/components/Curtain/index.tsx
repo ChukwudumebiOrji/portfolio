@@ -16,6 +16,7 @@ const curtainVariants: any = {
     transition: { duration: loadingDuration },
     ease: [0.06, 0.21, 0.34, 0.84],
   },
+
   // pulsing circle animation
   circle: {
     backgroundColor: "#1E1E1E",
@@ -25,9 +26,11 @@ const curtainVariants: any = {
       duration: 0.3,
     },
   },
-  // welcome text animation
-  textInitial: { scale: 1.2, opacity: 0 },
-  text: {
+
+  textInitial: { scale: 3, opacity: 0 },
+
+  // hello text animation
+  helloText: {
     scale: 1,
     opacity: 1,
     transition: {
@@ -36,9 +39,25 @@ const curtainVariants: any = {
       duration: 1.5,
     },
   },
+
+  // welcome text animation
+  welcomeText: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.6,
+      duration: 1.5,
+    },
+  },
+
   // curtain exit animation
   curtain: {
     y: "-100%",
+    transition: {
+      ease: [0.06, 0.21, 0.34, 0.84],
+      duration: 1.5,
+    },
   },
 }
 
@@ -71,7 +90,7 @@ const Curtain = () => {
           <motion.p
             variants={curtainVariants}
             initial="textInitial"
-            animate="text"
+            animate="welcomeText"
             className="welcome-text"
           >
             Welcome to my world
@@ -109,7 +128,7 @@ const Curtain = () => {
           <motion.p
             variants={curtainVariants}
             initial="textInitial"
-            animate="text"
+            animate="helloText"
             className="welcome-text"
           >
             Hello

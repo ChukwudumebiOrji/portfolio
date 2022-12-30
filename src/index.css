@@ -185,6 +185,7 @@ button {
   flex-direction: column;
   background-color: var(--color-light-bg);
   color: var(--color-light-text);
+  z-index: 5;
 }
 .curtain button {
   display: block;
