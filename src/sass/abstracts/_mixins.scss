@@ -68,3 +68,9 @@
     display: none;
   }
 }
+
+@mixin keyframe($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

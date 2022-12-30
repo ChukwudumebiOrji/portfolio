@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
+import { relative } from "path"
 import React, { useContext } from "react"
 import { BsArrowUpRight, BsMoon, BsSun } from "react-icons/bs"
 import { useLoaderData } from "react-router-dom"
@@ -31,6 +32,8 @@ const homeVariants = {
     opacity: 1,
     transition: {
       duration: 1.5,
+      type: "spring",
+      bounce: 0.6,
     },
   },
 }
@@ -85,7 +88,12 @@ const Home = () => {
                   </span>
                 ) : (
                   <Group title="Inspired by" headingClass="inspo">
-                    <a href="http://kadet.dev" target="_blank" rel="noreferrer">
+                    <a
+                      href="http://kadet.dev"
+                      target="_blank"
+                      rel="noreferrer"
+                      id="kadet-link"
+                    >
                       kadet.dev <BsArrowUpRight />
                     </a>
                   </Group>
