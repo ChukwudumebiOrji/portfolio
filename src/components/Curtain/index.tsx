@@ -7,11 +7,13 @@ import {
 import { AppContext } from "../../store/store"
 import { motion } from "framer-motion"
 
+const loadingDuration = 3.5
+
 const curtainVariants: any = {
   // loading bar animation
   loadingBar: {
     width: "90vw",
-    transition: { duration: 2.5 },
+    transition: { duration: loadingDuration },
     ease: [0.06, 0.21, 0.34, 0.84],
   },
   // pulsing circle animation
@@ -53,13 +55,13 @@ const Curtain = () => {
     }, 1000)
     setTimeout(() => {
       dispatch(closeCurtain())
-    }, 2500)
+    }, loadingDuration * 1000)
   }
 
   useEffect(() => {
     setTimeout(() => {
       dispatch(changeCurtainState("welcome"))
-    }, 1000)
+    }, 2000)
   }, [dispatch])
 
   switch (curtainState) {
@@ -104,7 +106,14 @@ const Curtain = () => {
     default:
       return (
         <div className="curtain">
-          <p className="welcome-text">Hello</p>
+          <motion.p
+            variants={curtainVariants}
+            initial="textInitial"
+            animate="text"
+            className="welcome-text"
+          >
+            Hello
+          </motion.p>
         </div>
       )
   }
