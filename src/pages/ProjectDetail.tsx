@@ -43,7 +43,12 @@ const ProjectDetail = () => {
                 <BsArrowLeft />
                 back
               </a>
-              <a href={project?.liveLink} target="_blank" rel="noreferrer">
+              <a
+                href={project?.liveLink}
+                target="_blank"
+                rel="noreferrer"
+                id="project-link"
+              >
                 View Project <BsArrowUpRight />
               </a>
             </div>

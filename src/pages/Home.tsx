@@ -55,12 +55,12 @@ const Home = () => {
         <AnimatePresence>{showCurtain && <Curtain />}</AnimatePresence>
         {!showCurtain && (
           <>
+            <Header route={route} />
             <motion.div
               variants={homeVariants}
               initial="topInitial"
               animate="top"
             >
-              <Header route={route} />
               <div className="about">
                 <p className="desc">
                   I have been a frontend developer since October, 2021. I create

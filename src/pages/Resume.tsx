@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import React from "react"
 import { BsFillFileEarmarkPdfFill } from "react-icons/bs"
 import { FaGoogleDrive } from "react-icons/fa"
@@ -7,6 +8,29 @@ import Header from "../components/Header"
 import Links from "../components/Links"
 const resumePdf = require("../assets/Resume.pdf")
 
+const resumeVariants = {
+  leftInitial: { x: "-50vw", opacity: 0 },
+  left: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      type: "spring",
+      bounce: 0.4,
+    },
+  },
+  rightInitial: { x: "50vw", opacity: 0 },
+  right: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      type: "spring",
+      bounce: 0.4,
+    },
+  },
+}
+
 const Resume = () => {
   const route = useLoaderData()
 
@@ -14,7 +38,11 @@ const Resume = () => {
     <div className="resume-container">
       <Header route={route} />
       <div className="resume">
-        <div>
+        <motion.div
+          variants={resumeVariants}
+          initial="leftInitial"
+          animate="left"
+        >
           <ul className="download-links">
             <li>
               <a href={resumePdf} download={"Chukwudumebi-Orji-Resume"}>
@@ -34,8 +62,14 @@ const Resume = () => {
             </li>
           </ul>
           <Links />
-        </div>
-        <CV />
+        </motion.div>
+        <motion.div
+          variants={resumeVariants}
+          initial="rightInitial"
+          animate="right"
+        >
+          <CV />
+        </motion.div>
       </div>
     </div>
   )

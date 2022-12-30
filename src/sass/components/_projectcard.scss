@@ -1,14 +1,14 @@
 .project-card {
   @include card;
   width: 325px;
-  max-height: 163px;
+  max-height: 180px;
   padding: 1.25em;
   cursor: pointer;
 
   @include mq(medium) {
     padding: 1.75em;
     width: 420px;
-    max-height: 210px;
+    max-height: 240px;
   }
 
   @include mq(large) {

@@ -5,7 +5,7 @@ import { getLanguagesStr } from "../../utils/func"
 import { motion } from "framer-motion"
 
 const cardHover: any = {
-  backgroundColor: "#1E1E1E",
+  backgroundColor: "#101010",
   transition: { duration: 0.2 },
 }
 
