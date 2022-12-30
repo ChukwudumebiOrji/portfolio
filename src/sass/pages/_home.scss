@@ -60,10 +60,12 @@
 
     &-container {
       max-width: 100%;
-      height: 280px;
       overflow-y: hidden;
       overflow-x: auto;
       @include remove-scrollbar;
+      @include mq(large) {
+        height: 280px;
+      }
     }
   }
 

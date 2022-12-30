@@ -201,6 +201,7 @@ button {
   bottom: 20vh;
   border: none;
   background-color: transparent;
+  color: var(--color-light-text);
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -383,7 +384,6 @@ button {
 }
 .home .projects-container {
   max-width: 100%;
-  height: 280px;
   overflow-y: hidden;
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -391,6 +391,11 @@ button {
 }
 .home .projects-container::-webkit-scrollbar {
   display: none;
+}
+@media screen and (min-width: 1024px) {
+  .home .projects-container {
+    height: 280px;
+  }
 }
 .home .footer {
   display: flex;

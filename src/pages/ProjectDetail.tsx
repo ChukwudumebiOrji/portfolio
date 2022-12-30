@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useLoaderData, useNavigate } from "react-router-dom"
 import Group from "../components/Group"
 import Header from "../components/Header"
@@ -6,10 +6,13 @@ import projects from "../data/projects"
 import { BsArrowLeft, BsArrowUpRight } from "react-icons/bs"
 import { getLanguagesStr } from "../utils/func"
 import Links from "../components/Links"
+import { closeCurtain } from "../store/actions"
+import { AppContext } from "../store/store"
 
 const ProjectDetail = () => {
   const loaderData = useLoaderData()
   const nav = useNavigate()
+  const { dispatch } = useContext(AppContext)
 
   const project = projects.find((el) => el.title === loaderData)
 
@@ -39,10 +42,15 @@ const ProjectDetail = () => {
           <div className="details">
             <p className="desc">{project?.longDesc}</p>
             <div className="viewlink">
-              <a href="/">
+              <div
+                onClick={() => {
+                  dispatch(closeCurtain())
+                  nav("/home")
+                }}
+              >
                 <BsArrowLeft />
                 back
-              </a>
+              </div>
               <a
                 href={project?.liveLink}
                 target="_blank"
