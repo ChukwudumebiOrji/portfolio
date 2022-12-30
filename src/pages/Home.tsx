@@ -21,6 +21,8 @@ const homeVariants = {
     opacity: 1,
     transition: {
       duration: 1.5,
+      type: "spring",
+      bounce: 0.6,
     },
   },
   bottomInitial: {

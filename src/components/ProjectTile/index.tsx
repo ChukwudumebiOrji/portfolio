@@ -34,7 +34,7 @@ const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
           </Group>
         </div>
 
-        <a href={liveLink} target="_blank" rel="noreferrer">
+        <a href={liveLink} target="_blank" rel="noreferrer" id="project-link">
           View Project <BsArrowUpRight />
         </a>
       </div>
