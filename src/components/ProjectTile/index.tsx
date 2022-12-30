@@ -13,17 +13,17 @@ const getCardDimensions = () => {
   if (window.innerWidth >= 1024) {
     cardHover.width = "640px"
     cardHover.height = "320px"
-    cardHover.padding = "3.5em"
+    cardHover.padding = "56px"
     return cardHover
   } else if (window.innerWidth >= 768) {
     cardHover.width = "480px"
     cardHover.height = "240px"
-    cardHover.padding = "2.75em"
+    cardHover.padding = "44px"
     return cardHover
   } else {
     cardHover.width = "420px"
     cardHover.height = "210px"
-    cardHover.padding = "2.25em"
+    cardHover.padding = "36px"
     return cardHover
   }
 }
