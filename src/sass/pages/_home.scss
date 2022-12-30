@@ -44,7 +44,7 @@
   }
 
   .projects {
-    @include flex($gap: 0.75em, $align: center);
+    @include flex($gap: 0.75em, $align: flex-start);
     width: fit-content;
 
     &-list {
