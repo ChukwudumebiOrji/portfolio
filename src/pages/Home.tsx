@@ -63,10 +63,11 @@ const Home = () => {
             >
               <div className="about">
                 <p className="desc">
-                  I have been a frontend developer since October, 2021. I create
-                  interactive experiences for amazing people using modern web
-                  technology. I am currently learning how to write immersive web
-                  animations and also exploring the decentralised web.
+                  I have been a frontend developer since October, 2021. That
+                  means I build aesthetic and functional UI for users to
+                  interact with. Currently I'm exploring 3d animations with gsap
+                  and three.js. When I'm not writing code, you can find me
+                  playing chess, fifa or watching AC Milan.
                 </p>
                 <Group
                   title="Fluent programming languages"
