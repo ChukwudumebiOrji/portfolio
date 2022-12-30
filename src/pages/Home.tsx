@@ -87,7 +87,10 @@ const Home = () => {
               <div className="footer">
                 <Links />
                 {showMenuBtn ? (
-                  <span onClick={() => dispatch(toggleTheme())}>
+                  <span
+                    onClick={() => dispatch(toggleTheme())}
+                    id="mobile-toggle"
+                  >
                     {isDark ? <BsFillSunFill /> : <BsFillMoonFill />}
                   </span>
                 ) : (
