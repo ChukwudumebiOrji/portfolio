@@ -20,11 +20,7 @@ const Home = () => {
   return (
     <div className="home">
       <div>
-        {showCurtain && (
-          <AnimatePresence>
-            <Curtain />
-          </AnimatePresence>
-        )}
+        <AnimatePresence>{showCurtain && <Curtain />}</AnimatePresence>
         <Header route={route} />
         <div className="about">
           <p className="desc">

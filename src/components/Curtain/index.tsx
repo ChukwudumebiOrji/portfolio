@@ -35,7 +35,9 @@ const curtainVariants: any = {
     },
   },
   // curtain exit animation
-  curtain: {},
+  curtain: {
+    y: "-100%",
+  },
 }
 
 const Curtain = () => {
