@@ -7,7 +7,7 @@ import {
 import { AppContext } from "../../store/store"
 import { motion } from "framer-motion"
 
-const loadingDuration = 3.5
+const loadingDuration = 1.5
 
 const curtainVariants: any = {
   // loading bar animation
@@ -55,8 +55,8 @@ const curtainVariants: any = {
   curtain: {
     y: "-100%",
     transition: {
-      ease: [0.06, 0.21, 0.34, 0.84],
-      duration: 1.5,
+      ease: [0.75, 0.6, 0.22, 1.0],
+      duration: 1,
     },
   },
 }
@@ -71,7 +71,7 @@ const Curtain = () => {
     dispatch(changeCurtainState("loading"))
     setTimeout(() => {
       dispatch(changeLoadingText("tidying up"))
-    }, 1000)
+    }, loadingDuration * 1000 * 0.4)
     setTimeout(() => {
       dispatch(closeCurtain())
     }, loadingDuration * 1000)
@@ -80,7 +80,7 @@ const Curtain = () => {
   useEffect(() => {
     setTimeout(() => {
       dispatch(changeCurtainState("welcome"))
-    }, 2000)
+    }, 1500)
   }, [dispatch])
 
   switch (curtainState) {

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { BsArrowUpRight } from "react-icons/bs"
 import Group from "../Group"
 import { getLanguagesStr } from "../../utils/func"
+import { motion } from "framer-motion"
 
 const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
   const nav = useNavigate()
@@ -11,7 +12,7 @@ const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
   }
 
   return (
-    <div onClick={navigateOnClick} className="project-card">
+    <motion.div onClick={navigateOnClick} className="project-card">
       <h2 className="title">{title}</h2>
 
       <p className="desc">{shortDesc}</p>
@@ -38,7 +39,7 @@ const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
           View Project <BsArrowUpRight />
         </a>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
