@@ -71,7 +71,7 @@ const Curtain = () => {
     dispatch(changeCurtainState("loading"))
     setTimeout(() => {
       dispatch(changeLoadingText("tidying up"))
-    }, loadingDuration * 1000 * 0.4)
+    }, loadingDuration * 1000 * 0.6)
     setTimeout(() => {
       dispatch(closeCurtain())
     }, loadingDuration * 1000)

@@ -1,17 +1,30 @@
 .project-card {
   @include card;
   width: 325px;
+  max-height: 163px;
   padding: 1.25em;
   cursor: pointer;
 
   @include mq(medium) {
     padding: 1.75em;
     width: 420px;
+    max-height: 210px;
   }
 
   @include mq(large) {
     padding: 2.5em;
     width: 540px;
+    max-height: 270px;
+  }
+
+  &:hover {
+    max-height: 210px;
+    @include mq(medium) {
+      max-height: 240px;
+    }
+    @include mq(large) {
+      max-height: 320px;
+    }
   }
 
   .title {
@@ -61,7 +74,7 @@
       margin-left: 0.25em;
     }
     &:hover svg {
-      animation: slide-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: slide-tr 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   }
 }

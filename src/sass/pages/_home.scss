@@ -44,7 +44,7 @@
   }
 
   .projects {
-    @include flex($gap: 0.75em);
+    @include flex($gap: 0.75em, $align: center);
     width: fit-content;
 
     &-list {
@@ -60,6 +60,7 @@
 
     &-container {
       max-width: 100%;
+      height: auto;
       overflow-y: hidden;
       overflow-x: auto;
       @include remove-scrollbar;
@@ -87,7 +88,7 @@
 
   #kadet-link {
     &:hover svg {
-      animation: slide-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      animation: slide-tr 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   }
 }
