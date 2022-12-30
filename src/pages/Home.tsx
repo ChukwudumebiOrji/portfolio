@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion"
 import React, { useContext } from "react"
 import { BsArrowUpRight, BsMoon, BsSun } from "react-icons/bs"
 import { useLoaderData } from "react-router-dom"
@@ -19,7 +20,11 @@ const Home = () => {
   return (
     <div className="home">
       <div>
-        {showCurtain && <Curtain />}
+        {showCurtain && (
+          <AnimatePresence>
+            <Curtain />
+          </AnimatePresence>
+        )}
         <Header route={route} />
         <div className="about">
           <p className="desc">

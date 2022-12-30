@@ -5,22 +5,37 @@ import {
   closeCurtain,
 } from "../../store/actions"
 import { AppContext } from "../../store/store"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 const curtainVariants: any = {
-  initial: {},
+  // loading bar animation
   loadingBar: {
     width: "90vw",
     transition: { duration: 2.5 },
+    ease: [0.06, 0.21, 0.34, 0.84],
   },
+  // pulsing circle animation
   circle: {
     backgroundColor: "#1E1E1E",
     transition: {
       repeat: Infinity,
       repeatType: "reverse",
-      duration: 0.75,
+      duration: 0.3,
     },
   },
+  // welcome text animation
+  textInitial: { scale: 1.2, opacity: 0 },
+  text: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.6,
+      duration: 1.5,
+    },
+  },
+  // curtain exit animation
+  curtain: {},
 }
 
 const Curtain = () => {
@@ -45,39 +60,52 @@ const Curtain = () => {
     }, 1000)
   }, [dispatch])
 
-  if (curtainState === "welcome")
-    return (
-      <div className="curtain">
-        <p className="welcome-text">Welcome to my world</p>
-        <button onClick={curtainBtnHandler}>
-          Check me out{" "}
+  switch (curtainState) {
+    case "welcome":
+      return (
+        <div className="curtain">
+          <motion.p
+            variants={curtainVariants}
+            initial="textInitial"
+            animate="text"
+            className="welcome-text"
+          >
+            Welcome to my world
+          </motion.p>
+          <button onClick={curtainBtnHandler}>
+            Check me out{" "}
+            <motion.div
+              className="circle"
+              animate="circle"
+              variants={curtainVariants}
+            ></motion.div>
+          </button>
+        </div>
+      )
+
+    case "loading":
+      return (
+        <motion.div
+          className="curtain"
+          variants={curtainVariants}
+          exit="curtain"
+        >
           <motion.div
-            className="circle"
-            animate="circle"
+            className="loading-bar"
+            animate="loadingBar"
             variants={curtainVariants}
           ></motion.div>
-        </button>
-      </div>
-    )
+          <p className="loading-text">Gimme a sec, {loadingText}...</p>
+        </motion.div>
+      )
 
-  if (curtainState === "loading")
-    return (
-      <div className="curtain">
-        <motion.div
-          className="loading-bar"
-          initial="initial"
-          animate="loadingBar"
-          variants={curtainVariants}
-        ></motion.div>
-        <p className="loading-text">Gimme a sec, {loadingText}...</p>
-      </div>
-    )
-
-  return (
-    <div className="curtain">
-      <p className="welcome-text">Hello</p>
-    </div>
-  )
+    default:
+      return (
+        <div className="curtain">
+          <p className="welcome-text">Hello</p>
+        </div>
+      )
+  }
 }
 
 export default Curtain
