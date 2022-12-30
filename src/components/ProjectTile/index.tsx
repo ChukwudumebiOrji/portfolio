@@ -7,25 +7,8 @@ import { motion } from "framer-motion"
 const cardHover: any = {
   backgroundColor: "#101010",
   transition: { duration: 0.2 },
-}
-
-const getCardDimensions = () => {
-  if (window.innerWidth >= 1024) {
-    cardHover.width = "640px"
-    cardHover.height = "280px"
-    cardHover.padding = "40px"
-    return cardHover
-  } else if (window.innerWidth >= 768) {
-    cardHover.width = "480px"
-    cardHover.height = "240px"
-    cardHover.padding = "36px"
-    return cardHover
-  } else {
-    cardHover.width = "420px"
-    cardHover.height = "200px"
-    cardHover.padding = "24px"
-    return cardHover
-  }
+  height: "280px",
+  padding: "40px",
 }
 
 const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
@@ -38,7 +21,7 @@ const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
   return (
     <motion.div
       onClick={navigateOnClick}
-      whileHover={getCardDimensions()}
+      whileHover={cardHover}
       className="project-card"
     >
       <h2 className="title">{title}</h2>

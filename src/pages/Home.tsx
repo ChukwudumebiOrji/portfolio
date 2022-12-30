@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { relative } from "path"
 import React, { useContext } from "react"
-import { BsArrowUpRight, BsMoon, BsSun } from "react-icons/bs"
+import { BsArrowUpRight, BsFillMoonFill, BsFillSunFill } from "react-icons/bs"
 import { useLoaderData } from "react-router-dom"
 import Curtain from "../components/Curtain"
 import Group from "../components/Group"
@@ -89,7 +88,7 @@ const Home = () => {
                 <Links />
                 {showMenuBtn ? (
                   <span onClick={() => dispatch(toggleTheme())}>
-                    {isDark ? <BsSun /> : <BsMoon />}
+                    {isDark ? <BsFillSunFill /> : <BsFillMoonFill />}
                   </span>
                 ) : (
                   <Group title="Inspired by" headingClass="inspo">

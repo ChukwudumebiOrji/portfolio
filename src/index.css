@@ -403,16 +403,16 @@ button {
   align-items: flex-end;
   gap: 0;
   flex-direction: row;
-  margin-top: 1em;
+  margin-top: 1.25em;
 }
 @media screen and (min-width: 768px) {
   .home .footer {
-    margin-top: 1.25em;
+    margin-top: 1.5em;
   }
 }
 @media screen and (min-width: 1024px) {
   .home .footer {
-    margin-top: 1.5em;
+    margin-top: 1.75em;
   }
 }
 .home .footer > * {

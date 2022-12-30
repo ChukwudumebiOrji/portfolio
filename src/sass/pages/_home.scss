@@ -71,13 +71,13 @@
 
   .footer {
     @include flex($justify: space-between, $align: flex-end);
-    margin-top: 1em;
+    margin-top: 1.25em;
 
     @include mq(medium) {
-      margin-top: 1.25em;
+      margin-top: 1.5em;
     }
     @include mq(large) {
-      margin-top: 1.5em;
+      margin-top: 1.75em;
     }
     > * {
       max-width: 50%;
