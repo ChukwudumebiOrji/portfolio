@@ -1,5 +1,5 @@
 .project-card {
-  @include card;
+  // @include card;
   height: 174px;
   aspect-ratio: 2 / 1;
   padding: 0.75em;
@@ -61,6 +61,7 @@
   .detail-title {
     font-weight: 300;
     text-transform: uppercase;
+    opacity: 0.7;
   }
 
   .detail-body {

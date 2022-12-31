@@ -3,25 +3,32 @@ import { BsArrowUpRight } from "react-icons/bs"
 import Group from "../Group"
 import { getLanguagesStr } from "../../utils/func"
 import { motion } from "framer-motion"
-
-const cardHover: any = {
-  backgroundColor: "#101010",
-  transition: { duration: 0.2 },
-  height: "280px",
-  padding: "40px",
-}
+import { useContext } from "react"
+import { AppContext } from "../../store/store"
 
 const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
   const nav = useNavigate()
+  const {
+    state: { isDark },
+  } = useContext(AppContext)
 
   const navigateOnClick = () => {
     nav(`/project/${title}`)
+  }
+
+  const cardHover: any = {
+    backgroundColor: isDark ? "#ede0d4" : "#212121",
+    color: isDark ? "#212121" : "#f9f8f6",
+    height: "280px",
+    padding: "40px",
+    transition: { duration: 0.2 },
   }
 
   return (
     <motion.div
       onClick={navigateOnClick}
       whileHover={cardHover}
+      whileTap={{ scale: 0.5 }}
       className="project-card"
     >
       <h2 className="title">{title}</h2>
@@ -32,14 +39,14 @@ const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
         <div className="details-content">
           <Group
             title="year"
-            headingClass="grayed-text detail-title"
+            headingClass="detail-title"
             contentClass="detail-body"
           >
             {year}
           </Group>
           <Group
             title="languages"
-            headingClass="grayed-text detail-title"
+            headingClass="detail-title"
             contentClass="detail-body"
           >
             {getLanguagesStr(languages)}

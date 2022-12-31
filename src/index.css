@@ -578,21 +578,10 @@ button {
 }
 
 .project-card {
-  color: var(--color-card-text);
-  background-color: var(--color-card-background);
   height: 174px;
   aspect-ratio: 2/1;
   padding: 0.75em;
   cursor: pointer;
-}
-.project-card .grayed-text {
-  color: var(--color-card-grayed-text);
-}
-.project-card svg {
-  color: var(--color-card-text);
-}
-.project-card svg:hover {
-  color: inherit;
 }
 @media screen and (min-width: 768px) {
   .project-card {
@@ -673,6 +662,7 @@ button {
 .project-card .detail-title {
   font-weight: 300;
   text-transform: uppercase;
+  opacity: 0.7;
 }
 .project-card .detail-body {
   font-weight: 500;
