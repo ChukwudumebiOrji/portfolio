@@ -22,6 +22,7 @@ const ProjectDetail = () => {
       <button
         className="highlighted"
         onClick={() => {
+          dispatch(closeCurtain())
           nav(-1)
         }}
       >

@@ -16,4 +16,13 @@
       color: var(--color-light-icon-hover);
     }
   }
+
+  #project-link {
+    svg {
+      color: var(--color-dark-icon);
+      &:hover {
+        color: var(--color-dark-icon-hover);
+      }
+    }
+  }
 }

@@ -21,7 +21,7 @@ const homeVariants = {
     transition: {
       duration: 1.5,
       type: "spring",
-      bounce: 0.4,
+      bounce: 0.3,
       delay: 0.2,
     },
   },
@@ -35,7 +35,7 @@ const homeVariants = {
     transition: {
       duration: 1.5,
       type: "spring",
-      bounce: 0.4,
+      bounce: 0.3,
       delay: 0.2,
     },
   },

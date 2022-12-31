@@ -162,6 +162,12 @@ button {
 .light svg:hover {
   color: var(--color-light-icon-hover);
 }
+.light #project-link svg {
+  color: var(--color-dark-icon);
+}
+.light #project-link svg:hover {
+  color: var(--color-dark-icon-hover);
+}
 
 .dark {
   background-color: var(--color-dark-bg);
@@ -178,6 +184,12 @@ button {
 }
 .dark svg:hover {
   color: var(--color-dark-icon-hover);
+}
+.dark #project-link svg {
+  color: var(--color-light-icon);
+}
+.dark #project-link svg:hover {
+  color: var(--color-light-icon-hover);
 }
 
 .curtain {
@@ -578,10 +590,21 @@ button {
 }
 
 .project-card {
+  color: var(--color-card-text);
+  background-color: var(--color-card-background);
   height: 174px;
   aspect-ratio: 2/1;
   padding: 0.75em;
   cursor: pointer;
+}
+.project-card .grayed-text {
+  color: var(--color-card-grayed-text);
+}
+.project-card svg {
+  color: var(--color-card-text);
+}
+.project-card svg:hover {
+  color: inherit;
 }
 @media screen and (min-width: 768px) {
   .project-card {
@@ -666,6 +689,9 @@ button {
 }
 .project-card .detail-body {
   font-weight: 500;
+}
+.project-card #project-link {
+  padding: 0.25em 0.25em 0 0.25em;
 }
 .project-card #project-link svg {
   margin-left: 0.25em;
