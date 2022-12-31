@@ -638,7 +638,7 @@ button {
   -o-aspect-ratio: 2;
   -webkit-aspect-ratio: 2;
   aspect-ratio: 2;
-  padding: 1em;
+  padding: 0.87em;
   cursor: pointer;
 }
 .project-card .grayed-text {

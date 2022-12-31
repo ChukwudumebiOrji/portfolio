@@ -2,7 +2,7 @@
   @include card;
   height: 175px;
   @include prefix($property: aspect-ratio, $value: 2);
-  padding: 1em;
+  padding: 0.87em;
   cursor: pointer;
 
   @include mq(medium) {
