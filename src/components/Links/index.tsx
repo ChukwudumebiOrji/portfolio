@@ -12,7 +12,7 @@ const Links = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillGithub />
+            <AiFillTwitterCircle />
           </a>
         </li>
         <li>
@@ -21,7 +21,7 @@ const Links = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <AiFillTwitterCircle />
+            <AiFillGithub />
           </a>
         </li>
         <li>
