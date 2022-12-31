@@ -162,10 +162,7 @@ button {
 .light svg:hover {
   color: var(--color-light-icon-hover);
 }
-.light #project-link svg {
-  color: var(--color-dark-icon);
-}
-.light #project-link svg:hover {
+.light .project-card:hover svg {
   color: var(--color-dark-icon-hover);
 }
 
@@ -185,10 +182,7 @@ button {
 .dark svg:hover {
   color: var(--color-dark-icon-hover);
 }
-.dark #project-link svg {
-  color: var(--color-light-icon);
-}
-.dark #project-link svg:hover {
+.dark .project-card:hover svg {
   color: var(--color-light-icon-hover);
 }
 
