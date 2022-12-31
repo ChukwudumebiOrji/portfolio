@@ -14,7 +14,7 @@ const CV = () => {
         headingClass="title"
         contentClass="mb-24"
       >
-        Html, Css, Sass, Javascript, React, Vue
+        Html, Css, Sass, Javascript, React, Angular
       </Group>
       <Group title="Soft skills" headingClass="title" contentClass="mb-64">
         Communication, Teamwork, Agile/Scrum workflow
