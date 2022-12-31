@@ -1,6 +1,6 @@
 .project-card {
   @include card;
-  height: 185px;
+  height: 175px;
   @include prefix($property: aspect-ratio, $value: 2);
   padding: 0.75em;
   cursor: pointer;

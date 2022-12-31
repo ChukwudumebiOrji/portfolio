@@ -632,7 +632,7 @@ button {
 .project-card {
   color: var(--color-card-text);
   background-color: var(--color-card-background);
-  height: 185px;
+  height: 175px;
   -moz-aspect-ratio: 2;
   -ms-aspect-ratio: 2;
   -o-aspect-ratio: 2;
