@@ -11,6 +11,7 @@
     border: none;
     background-color: transparent;
     color: var(--color-light-text);
+    text-decoration: underline;
     @include font-properties(400, 14px, 18px);
     @include flex($align: center, $justify: center);
 

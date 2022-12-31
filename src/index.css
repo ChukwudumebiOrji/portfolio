@@ -208,6 +208,7 @@ button {
   border: none;
   background-color: transparent;
   color: var(--color-light-text);
+  text-decoration: underline;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
