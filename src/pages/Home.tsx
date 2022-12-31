@@ -73,7 +73,7 @@ const Home = () => {
                   headingClass="languages"
                   contentClass="languages-content"
                 >
-                  Html, Css, Sass, Javascript, React, Vue
+                  Html, Css, Sass, Javascript, React, Angular, Redux
                 </Group>
               </div>
             </motion.div>

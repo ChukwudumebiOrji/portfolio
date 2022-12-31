@@ -57,11 +57,11 @@
 
     a {
       @include flex($align: center);
+    }
 
-      &:first-of-type {
-        @include mq(medium) {
-          visibility: hidden;
-        }
+    span {
+      @include mq(medium) {
+        visibility: hidden;
       }
     }
 

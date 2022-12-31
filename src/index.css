@@ -575,7 +575,7 @@ button {
   flex-direction: row;
 }
 @media screen and (min-width: 768px) {
-  .project-detail .viewlink a:first-of-type {
+  .project-detail .viewlink span {
     visibility: hidden;
   }
 }

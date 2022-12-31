@@ -35,8 +35,8 @@ const curtainVariants: any = {
     opacity: 1,
     transition: {
       type: "spring",
-      bounce: 0.6,
-      duration: 1.5,
+      bounce: 0.5,
+      duration: 1.2,
     },
   },
 
@@ -46,8 +46,8 @@ const curtainVariants: any = {
     opacity: 1,
     transition: {
       type: "spring",
-      bounce: 0.6,
-      duration: 1.5,
+      bounce: 0.5,
+      duration: 1.2,
     },
   },
 

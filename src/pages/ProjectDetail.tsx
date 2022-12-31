@@ -43,7 +43,7 @@ const ProjectDetail = () => {
           <div className="details">
             <p className="desc">{project?.longDesc}</p>
             <div className="viewlink">
-              <div
+              <span
                 onClick={() => {
                   dispatch(closeCurtain())
                   nav("/home")
@@ -51,7 +51,7 @@ const ProjectDetail = () => {
               >
                 <BsArrowLeft />
                 back
-              </div>
+              </span>
               <a
                 href={project?.liveLink}
                 target="_blank"
