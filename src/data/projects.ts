@@ -10,6 +10,18 @@ export interface IProject {
 
 const projects: IProject[] = [
   {
+    title: "Starfinder",
+    shortDesc:
+      "An api that can be integrated to find and prioritize VIP's that use your site",
+    year: "2022",
+    languages: ["react", "css"],
+    liveLink: "https://starfinder.dev/",
+    longDesc: `
+      What happens if Barack Obama visits your site? Are you aware? Starfinder would research his name, look up his profile on social media, and inform you that he could be a VIP so you could personally contact and give him priority.\n
+      This project was built by my HNG teammates and I from stage 4 through to 10. As for my personal input, I was in charge of the Profile and Settings pages in the dashboard, as well as the UI for the Login page. We built it over a duration of 5 weeks and implemented all the endpoints from the backend to ensure everything works.
+      `,
+  },
+  {
     title: "WhereInTheWorld",
     shortDesc:
       "A website that displays countries all around the world and their information",

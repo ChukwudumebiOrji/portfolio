@@ -28,7 +28,6 @@ const ProjectTile = ({ title, shortDesc, year, languages, liveLink }: any) => {
     <motion.div
       onClick={navigateOnClick}
       whileHover={cardHover}
-      whileTap={{ scale: 0.5 }}
       className="project-card"
     >
       <h2 className="title">{title}</h2>
