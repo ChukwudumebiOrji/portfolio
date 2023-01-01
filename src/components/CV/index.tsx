@@ -17,7 +17,7 @@ const CV = () => {
         Html, Css, Sass, Javascript, React, Angular
       </Group>
       <Group title="Soft skills" headingClass="title" contentClass="mb-64">
-        Communication, Teamwork, Agile/Scrum workflow
+        Skilled multitasker with superior work ethic and excellent teamwork, problem-solving and organizational skills. Willing to take on any task to help the team. Reliable and dedicated team player with hardworking and resourceful approach.
       </Group>
       <Group title="Work Experience" headingClass="title title-last">
         {workExperience.map((el) => (
