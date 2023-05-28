@@ -52,7 +52,7 @@ const Resume = () => {
             </li>
             <li>
               <a
-                href="https://drive.google.com/file/d/1yQ8sNf4REM41gSk8wqjOn3DnJJHwwiKN/view?usp=share_link"
+                href="https://drive.google.com/file/d/12zpgvyPhbk7PIzDge-rOnX34Tny6_XMY/view"
                 target="_blank"
                 rel="noreferrer"
               >
